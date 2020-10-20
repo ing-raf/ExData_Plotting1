@@ -14,7 +14,7 @@ names(dataset) <- colnames
 dataset$Timestamp <- strptime(paste(dataset$Date, dataset$Time), "%d/%m/%Y %H:%M:%S", tz = "Europe/Paris")
 
 # Produce the plot
-png("plot3.png")
+png("plot3.png", width = 480, height = 480)
 with(dataset,  {
 	plot(Timestamp, Sub_metering_1, type = "l", xlab = "", ylab = "")
 	lines(Timestamp, Sub_metering_2, col = "red")	

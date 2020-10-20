@@ -11,6 +11,6 @@ names(dataset) <- colnames
 dataset$Timestamp <- strptime(paste(dataset$Date, dataset$Time), "%d/%m/%Y %H:%M:%S", tz = "Europe/Paris")
 
 # Produce the plot
-png("plot1.png")
+png("plot1.png", width = 480, height = 480)
 hist(dataset$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global active power (kilowatts)")
 dev.off()

@@ -14,7 +14,7 @@ names(dataset) <- colnames
 dataset$Timestamp <- strptime(paste(dataset$Date, dataset$Time), "%d/%m/%Y %H:%M:%S", tz = "Europe/Paris")
 
 # Produce the plot
-png("plot2.png")
+png("plot2.png", width = 480, height = 480)
 with(dataset,
 	 plot(Timestamp, Global_active_power, type = "l", ylab = "Global active power (kilowatts)")
 )

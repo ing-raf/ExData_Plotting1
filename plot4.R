@@ -14,7 +14,7 @@ names(dataset) <- colnames
 dataset$Timestamp <- strptime(paste(dataset$Date, dataset$Time), "%d/%m/%Y %H:%M:%S", tz = "Europe/Paris")
 
 # Configure the graphic device
-png("plot4.png")
+png("plot4.png", width = 480, height = 480)
 par(mfcol = c(2,2))
 
 # Plot 1
